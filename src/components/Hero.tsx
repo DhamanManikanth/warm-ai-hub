@@ -17,7 +17,7 @@ const Hero = () => {
           Join our vibrant WhatsApp community where we share the latest AI updates, tools, and insights. Connect with fellow enthusiasts and stay informed.
         </p>
         <a
-          href="https://chat.whatsapp.com/YOURGROUPINVITELINK"
+          href="https://chat.whatsapp.com/CYP5apkKMNk9tEjdVZanwO"
           target="_blank"
           rel="noopener noreferrer"
           className="button-primary inline-flex items-center group"

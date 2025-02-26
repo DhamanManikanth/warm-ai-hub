@@ -31,8 +31,9 @@ export default {
           light: "#E9D8FD",
         },
         accent: {
-          DEFAULT: "#4FD1C5",
-          hover: "#38B2AC",
+          DEFAULT: "#FEC6A1",
+          hover: "#E5DEFF",
+          light: "#D3E4FD",
         },
         neutral: {
           100: "#F7FAFC",
@@ -45,6 +46,10 @@ export default {
           800: "#2D3748",
           900: "#1A202C",
         },
+      },
+      fontFamily: {
+        sans: ["Poppins", "sans-serif"],
+        display: ["Comfortaa", "cursive"],
       },
       borderRadius: {
         lg: "var(--radius)",

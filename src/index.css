@@ -1,5 +1,5 @@
 
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -30,21 +30,21 @@
   }
 
   body {
-    @apply bg-neutral-100 text-neutral-800 font-['Inter'];
+    @apply bg-neutral-100 text-neutral-800 font-['Poppins'];
   }
 
   h1, h2, h3, h4, h5, h6 {
-    @apply font-['Playfair_Display'] font-medium;
+    @apply font-['Comfortaa'] font-medium;
   }
 }
 
 @layer components {
   .glass-card {
-    @apply backdrop-blur-sm bg-white/80 border border-white/20 shadow-lg;
+    @apply backdrop-blur-sm bg-white/80 border border-white/20 shadow-lg hover:shadow-xl transition-all duration-300;
   }
 
   .hover-card {
-    @apply transition-all duration-300 hover:shadow-xl hover:-translate-y-1;
+    @apply transition-all duration-300 hover:shadow-xl hover:-translate-y-1 hover:scale-[1.02];
   }
 
   .section-padding {
@@ -61,27 +61,32 @@
            hover:shadow-lg hover:-translate-y-0.5 
            active:translate-y-0 active:shadow-md;
   }
-
-  .button-secondary {
-    @apply bg-accent text-white px-6 py-3 rounded-full font-medium 
-           transition-all duration-300 hover:bg-accent-hover 
-           hover:shadow-lg hover:-translate-y-0.5 
-           active:translate-y-0 active:shadow-md;
-  }
 }
 
 .animate-in {
   animation: fadeIn 0.5s ease-out forwards;
 }
 
-.animate-delay-100 {
-  animation-delay: 100ms;
+@keyframes fadeIn {
+  from { 
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
-.animate-delay-200 {
-  animation-delay: 200ms;
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
 }
 
-.animate-delay-300 {
-  animation-delay: 300ms;
+.animate-float {
+  animation: float 6s ease-in-out infinite;
 }

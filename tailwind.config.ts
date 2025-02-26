@@ -20,15 +20,20 @@ export default {
     },
     extend: {
       colors: {
+        netflix: {
+          red: "#E50914",
+          black: "#141414",
+          white: "#FFFFFF",
+        },
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
         ring: "hsl(var(--ring))",
-        background: "hsl(var(--background))",
-        foreground: "hsl(var(--foreground))",
+        background: "#141414",
+        foreground: "#FFFFFF",
         primary: {
-          DEFAULT: "#9F7AEA",
-          hover: "#805AD5",
-          light: "#E9D8FD",
+          DEFAULT: "#E50914",
+          hover: "#B2070F",
+          light: "#FF1722",
         },
         accent: {
           DEFAULT: "#FEC6A1",
@@ -36,15 +41,15 @@ export default {
           light: "#D3E4FD",
         },
         neutral: {
-          100: "#F7FAFC",
-          200: "#EDF2F7",
-          300: "#E2E8F0",
-          400: "#CBD5E0",
-          500: "#A0AEC0",
-          600: "#718096",
-          700: "#4A5568",
-          800: "#2D3748",
-          900: "#1A202C",
+          100: "#FFFFFF",
+          200: "#E5E5E5",
+          300: "#B3B3B3",
+          400: "#8C8C8C",
+          500: "#666666",
+          600: "#404040",
+          700: "#2A2A2A",
+          800: "#181818",
+          900: "#141414",
         },
       },
       fontFamily: {
@@ -84,3 +89,4 @@ export default {
   },
   plugins: [require("tailwindcss-animate")],
 } satisfies Config;
+

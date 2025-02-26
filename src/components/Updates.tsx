@@ -3,19 +3,19 @@ import { Calendar } from "lucide-react";
 
 const updates = [
   {
-    date: "March 15, 2024",
-    title: "GPT-4 Turbo: The Next Evolution in AI",
-    description: "Explore the latest capabilities of GPT-4 Turbo and how it's revolutionizing AI applications across industries.",
+    date: "February 17, 2025",
+    title: "xAI's Grok 3 Now Available For Free",
+    description: "Announcing the move on X, xAI posted 'The world's smartest AI, Grok 3, now available for free (until our servers melt).' This surprise decision comes just a day after the official launch of Grok 3, a model claimed to be 10 times more capable than its predecessor.",
   },
   {
-    date: "March 14, 2024",
-    title: "Breakthrough in AI Image Generation",
-    description: "New advancements in image generation models are pushing the boundaries of creative AI applications.",
+    date: "February 12, 2025",
+    title: "OpenAI's Major Roadmap Update",
+    description: "Sam Altman announced a major roadmap update for OpenAI, revealing that GPT-4.5 (Orion) would be released soon, with GPT-5 following. This positions GPT-4.5 as OpenAI's final non-chain-of-thought model.",
   },
   {
-    date: "March 13, 2024",
-    title: "AI Ethics Guidelines Updated",
-    description: "Major tech companies collaborate on new ethical guidelines for AI development and deployment.",
+    date: "February 1, 2025",
+    title: "US-China AI Competition Intensifies",
+    description: "Reports highlight the intensifying competition between the U.S. and China in AI, driven by China's launch of DeepSeek's R1 model. This has raised concerns among U.S. experts about maintaining competitive edge.",
   },
 ];
 

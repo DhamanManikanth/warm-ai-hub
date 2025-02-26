@@ -3,19 +3,19 @@ import { Sparkles } from "lucide-react";
 
 const tools = [
   {
-    name: "AIWriter Pro",
-    description: "Advanced AI writing assistant that helps create engaging content with a human touch.",
-    link: "#",
+    name: "Claude 3.5",
+    description: "Known for its safety-first approach and interpretability, Claude 3.5 excels in handling nuanced conversations and complex reasoning tasks.",
+    link: "https://www.anthropic.com/claude",
   },
   {
-    name: "Neural Canvas",
-    description: "Create stunning artwork using state-of-the-art AI image generation technology.",
-    link: "#",
+    name: "GPT-4.5 (Orion)",
+    description: "OpenAI's latest model featuring enhanced writing, ideation, and creative capabilities, integrated with DALL-E 3 for seamless workflows.",
+    link: "https://openai.com",
   },
   {
-    name: "VoiceGenius",
-    description: "Transform text to natural-sounding speech in multiple languages and voices.",
-    link: "#",
+    name: "DeepSeek R1",
+    description: "An innovative AI model leveraging cost-effective chips to deliver competitive performance, making advanced AI more accessible globally.",
+    link: "https://deepseek.com",
   },
 ];
 

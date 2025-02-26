@@ -1,17 +1,36 @@
 
 import { Mail, MessageSquare } from "lucide-react";
 import { useState } from "react";
+import { supabase } from "@/integrations/supabase/client";
+import { toast } from "sonner";
 
 const Contact = () => {
   const [email, setEmail] = useState("");
-  const [isSubscribed, setIsSubscribed] = useState(false);
+  const [isLoading, setIsLoading] = useState(false);
 
-  const handleSubscribe = (e: React.FormEvent) => {
+  const handleSubscribe = async (e: React.FormEvent) => {
     e.preventDefault();
-    // For now, just show success state
-    // In future, this would connect to backend
-    setIsSubscribed(true);
-    setEmail("");
+    setIsLoading(true);
+
+    try {
+      const { error } = await supabase
+        .from('subscribers')
+        .insert([{ email }]);
+
+      if (error) throw error;
+
+      toast.success("Thank you for subscribing! We'll keep you updated.");
+      setEmail("");
+    } catch (error: any) {
+      console.error('Error:', error);
+      if (error.code === '23505') { // unique violation error code
+        toast.error("This email is already subscribed!");
+      } else {
+        toast.error("Something went wrong. Please try again.");
+      }
+    } finally {
+      setIsLoading(false);
+    }
   };
 
   return (
@@ -45,19 +64,18 @@ const Contact = () => {
                   onChange={(e) => setEmail(e.target.value)}
                   placeholder="Enter your email"
                   required
-                  className="flex-1 px-4 py-2 rounded-lg border border-neutral-300 focus:outline-none focus:ring-2 focus:ring-primary"
+                  disabled={isLoading}
+                  className="flex-1 px-4 py-2 rounded-lg border border-neutral-300 focus:outline-none focus:ring-2 focus:ring-primary disabled:opacity-50"
                 />
                 <button
                   type="submit"
-                  className="button-primary inline-flex items-center group"
+                  disabled={isLoading}
+                  className="button-primary inline-flex items-center group disabled:opacity-50"
                 >
-                  Subscribe
+                  {isLoading ? "Subscribing..." : "Subscribe"}
                   <Mail className="ml-2 w-5 h-5 transition-transform group-hover:translate-x-1" />
                 </button>
               </div>
-              {isSubscribed && (
-                <p className="text-green-600">Thank you for subscribing! We'll keep you updated.</p>
-              )}
             </form>
           </div>
         </div>
